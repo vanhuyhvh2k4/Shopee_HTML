@@ -1,0 +1,135 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color: rgb(245, 62, 46);
+    --boder-color: #dbdbdb;
+    --star-yellow-color: rgb(237, 237, 31);
+
+    --header-height: 150px;
+    --header__navbar-height: 28px;
+    --header__search-height: 120px;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    font-weight: 400;
+    scroll-behavior: smooth;
+}
+
+/* button */
+.btn {
+    min-width: 142px;
+    min-height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--white-color);
+}
+
+.btn.btn--normal:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.btn.btn--primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn.btn--primary:hover {
+    background-color: rgba(245, 62, 46, 0.8);
+}
+
+/* pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.pagination-item {
+    margin: 0 12px;
+}
+
+.pagination-item__link {
+    --height: 40px;
+    text-decoration: none;
+    color: #939393;
+    font-size: 1.6rem;
+    font-weight: 300;
+    min-width: 40px;
+    height: var(--height);
+    display: block;
+    text-align: center;
+    line-height: var(--height);
+    border-radius: 2px;
+}
+
+.pagination-item__link--active {
+    background-color: var(--primary-color);
+    color: var(--white-color) !important;
+}
+
+.pagination-item__link--active:hover {
+    background-color: rgba(245, 62, 46, 0.8);
+}
+
+
+/* animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+    to {
+        transform: scale(var(--growth-to));
+    }
+}
+
+@keyframes fallDown {
+    from {
+        opacity: 0;
+        scale: 0;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes flyUp {
+    to {
+        transform: translateY(-4px);
+    }
+}
+@keyframes downToUp {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
