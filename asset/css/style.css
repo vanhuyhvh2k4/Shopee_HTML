@@ -350,30 +350,30 @@
 
 /* modal layout */
 
-#checkbox-sign-in:checked ~ .modal {
+/* #checkbox-sign-in:checked ~ .modal {
     display: flex;
 }
 
 #checkbox-sign-up:checked~.modal {
     display: flex;
-}
+} */
 /* sign-in */
-#checkbox-sign-in:checked ~ .modal > .modal__body > .form-sign-in {
+/* #checkbox-sign-in:checked ~ .modal > .modal__body > .form-sign-in {
     display: block;
 }
 
 #checkbox-sign-in:checked ~ .modal > .modal__body > .form-sign-up {
     display: none;
-}
+} */
 
 /* sign-up */
-#checkbox-sign-up:checked ~ .modal > .modal__body > .form-sign-up {
+/* #checkbox-sign-up:checked ~ .modal > .modal__body > .form-sign-up {
     display: block;
 }
 
 #checkbox-sign-up:checked ~ .modal > .modal__body > .form-sign-in {
     display: none;
-}
+} */
 
 .modal {
     position: fixed;
@@ -384,6 +384,18 @@
     display: flex;
     animation: fadeIn linear 0.2s;
     z-index: 2;
+    display: none;
+}
+
+.display-block {
+    display: block;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.display-hidden {
     display: none;
 }
 
@@ -415,7 +427,7 @@ input[type='password'] {
     background-color: var(--white-color);
     border-radius: 5px;
     overflow: hidden;
-    display: none;
+    /* display: none; */
 }
 
 .form-sign-up__container {

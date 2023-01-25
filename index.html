@@ -104,8 +104,8 @@
                                 Trợ giúp
                             </a>
                         </li>
-                        <label for="checkbox-sign-in" class="header__navbar-item header__navbar-item--bold header__navbar-item--crossline">Đăng nhập</label>
-                        <label for="checkbox-sign-up" class="header__navbar-item header__navbar-item--bold ">Đăng ký</label>
+                        <li id='sign-in-btn' class="header__navbar-item header__navbar-item--bold header__navbar-item--crossline">Đăng nhập</li>
+                        <li id='sign-up-btn' class="header__navbar-item header__navbar-item--bold ">Đăng ký</li>
 
                         <li class="header__navbar-item header__navbar-user">
                             <img src="./asset/img/userimg.jpg" alt="" class="header__navbar-user-img">
@@ -1045,8 +1045,8 @@
             </div>
         </footer>
         <!-- modal layout -->
-        <input hidden type="checkbox" name="" id="checkbox-sign-in">
-        <input hidden type="checkbox" name="" id="checkbox-sign-up">
+        <!-- <input hidden type="checkbox" name="" id="checkbox-sign-in"> -->
+        <!-- <input hidden type="checkbox" name="" id="checkbox-sign-up"> -->
         <div class="modal">
                 <div class="modal__overlay"></div>
             <div class="modal__body">
@@ -1083,7 +1083,7 @@
                         </div>
 
                         <div class="form-sign-up__control">
-                            <label for="checkbox-sign-up" class="btn form-sign-up__control-back btn--normal">QUAY LẠI</label>
+                            <span class="btn form-sign-up__control-back btn--normal">QUAY LẠI</span>
                             <button class="btn btn--primary">ĐĂNG KÝ</button>
                         </div>
                     </div>
@@ -1127,7 +1127,7 @@
                         </div>
 
                         <div class="form-sign-in__control">
-                            <label for="checkbox-sign-in" class="btn form-sign-in__control-back btn--normal">QUAY LẠI</label for="checkbox-sign-in">
+                            <span class="btn form-sign-in__control-back btn--normal">QUAY LẠI</span>
                             <button class="btn btn--primary">ĐĂNG NHẬP</button>
                         </div>
                     </div>
@@ -1147,5 +1147,7 @@
             </div>
         </div>
     </div>
+    <script src="./asset/js/main.js"></script>
+    <script src="./asset/js/base.js"></script>
 </body>
 </html>
