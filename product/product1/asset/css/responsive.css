@@ -90,14 +90,6 @@
     .productRating-user-right-footer {
         padding-bottom: 24px;
     }
-
-    .form-sign-in {
-        width: 100vw;
-    }
-
-    .form-sign-up {
-        width: 100vw;
-    }
 }
 
 /* Tablet */
@@ -729,5 +721,12 @@
 
     .product__more-heading {
         display: block;
+    }
+
+    .form-sign-in {
+        width: 100vw;
+    }
+    .form-sign-up {
+        width: 100vw;
     }
 }

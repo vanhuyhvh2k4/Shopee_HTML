@@ -348,31 +348,6 @@
 
 /* modal layout */
 
-#checkbox-sign-in:checked~.modal {
-    display: flex;
-}
-
-#checkbox-sign-up:checked~.modal {
-    display: flex;
-}
-/* sign-in */
-#checkbox-sign-in:checked ~ .modal > .modal__body > .form-sign-in {
-    display: block;
-}
-
-#checkbox-sign-in:checked ~ .modal > .modal__body > .form-sign-up {
-    display: none;
-}
-
-/* sign-up */
-#checkbox-sign-up:checked ~ .modal > .modal__body > .form-sign-up {
-    display: block;
-}
-
-#checkbox-sign-up:checked ~ .modal > .modal__body > .form-sign-in {
-    display: none;
-}
-
 .modal {
     position: fixed;
     top: 0;
@@ -383,6 +358,18 @@
     animation: fadeIn linear 0.2s;
     z-index: 2;
     display: none;
+}
+
+.display-block {
+    display: block !important;
+}
+
+.display-flex {
+    display: flex !important;
+}
+
+.display-hidden {
+    display: none !important;
 }
 
 .modal__overlay {
@@ -413,7 +400,7 @@ input[type='password'] {
     background-color: var(--white-color);
     border-radius: 5px;
     overflow: hidden;
-    /* display: none; */
+    display: none;
 }
 
 .form-sign-up__container {
@@ -527,7 +514,7 @@ input[type='password'] {
     background-color: var(--white-color);
     border-radius: 5px;
     overflow: hidden;
-    /* display: none; */
+    display: none;
 }
 
 .form-sign-in__container {
@@ -707,6 +694,11 @@ input[type='password'] {
     transition: all linear 0.2s;
     border-right: 1px solid #999;
     z-index: 4;
+}
+
+.header__search-menu-content.displayMenu {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .header__search-menu-content-icon {
@@ -3880,6 +3872,7 @@ input[type='password'] {
     flex: 0.5;
     height: 100%;
     display: flex;
+    text-decoration: none;
 }
 
 .navigation__left i {

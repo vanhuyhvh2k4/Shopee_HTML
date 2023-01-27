@@ -130,23 +130,23 @@
                         <i class="header__search-menu-icon-icon fa-solid fa-bars"></i>
                     </label>
 
-                    <input hidden type="checkbox" name="" id="menu-checkbox" class="header__search-input-checkbox">
+                    <!-- <input hidden type="checkbox" name="" id="menu-checkbox" class="header__search-input-checkbox"> -->
                     
-                    <label for="menu-checkbox"  class="header__search-overlay"></label>
+                    <div for="menu-checkbox"  class="header__search-overlay"></div>
 
                     <div class="header__search-menu-content">
-                        <label for="menu-checkbox" class="header__search-menu-content-icon">
+                        <div class="header__search-menu-content-icon">
                             <i class="header__search-menu-content-icon-icon fa-solid fa-xmark"></i>
-                        </label>
+                        </div>
                         <ul class="header__search-menu-content-list">
                             <li class="header__search-menu-content-item">
-                                <label for="checkbox-sign-in" href="" class="header__search-menu-content-link">
+                                <label id="btn-sign-in-moble-tablet" href="" class="header__search-menu-content-link">
                                     <i class="header__search-menu-content-link-icon fa-solid fa-arrow-right-to-bracket"></i>
                                     Đăng nhập
                                 </label>
                             </li>
                             <li class="header__search-menu-content-item">
-                                <label for="checkbox-sign-up" href="" class="header__search-menu-content-link">
+                                <label id="btn-sign-up-moble-tablet" href="" class="header__search-menu-content-link">
                                     <i class="header__search-menu-content-link-icon fa-solid fa-user-plus"></i>
                                     Đăng ký
                                 </label>
@@ -1051,7 +1051,7 @@
                 <div class="modal__overlay"></div>
             <div class="modal__body">
                 <!-- *Form sign up* -->
-                <div class="form-sign-up">
+                <form class="form-sign-up">
                     <div class="form-sign-up__container">
                         <div class="form-sign-up__header">
                             <h3 class="form-sign-up__heading">Đăng ký</h3>
@@ -1083,7 +1083,7 @@
                         </div>
 
                         <div class="form-sign-up__control">
-                            <span class="btn form-sign-up__control-back btn--normal">QUAY LẠI</span>
+                            <span id="sign-up-return" class="btn form-sign-up__control-back btn--normal">QUAY LẠI</span>
                             <button class="btn btn--primary">ĐĂNG KÝ</button>
                         </div>
                     </div>
@@ -1099,10 +1099,10 @@
                             <span class="form-sign-up__socials-text">Đăng nhập Google</span>
                         </a>
                     </div>
-                </div>
+                </form>
 
                 <!-- *Form sign in* -->
-                <div class="form-sign-in">
+                <form class="form-sign-in">
                     <div class="form-sign-in__container">
                         <div class="form-sign-in__header">
                             <h3 class="form-sign-in__heading">Đăng nhập</h3>
@@ -1127,7 +1127,7 @@
                         </div>
 
                         <div class="form-sign-in__control">
-                            <span class="btn form-sign-in__control-back btn--normal">QUAY LẠI</span>
+                            <span id="sign-in-return" class="btn form-sign-in__control-back btn--normal">QUAY LẠI</span>
                             <button class="btn btn--primary">ĐĂNG NHẬP</button>
                         </div>
                     </div>
@@ -1143,7 +1143,7 @@
                             <span class="form-sign-in__socials-text">Đăng nhập google</span>
                         </a>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
