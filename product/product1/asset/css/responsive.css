@@ -127,12 +127,13 @@
     }
 
     .product__buy-img-large {
-        width: inherit;
-        height: inherit;
+        width: 100%;
+        height: 644px;
     }
 
     .product__buy-img-large-img {
-        width: inherit;
+        width: 100%;
+        height: 100%;
     }
 
     .product__buy-img-small {

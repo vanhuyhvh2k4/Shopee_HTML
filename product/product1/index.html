@@ -171,7 +171,7 @@
                         <i class="header__search-search-on-mobile-icon fa-solid fa-magnifying-glass"></i>
                     </label>
 
-                    <div class="header__search-logo hide-on-tablet">
+                    <a href="" class="header__search-logo hide-on-tablet">
                         <svg class="header__search-icon-shopee" viewBox="0 0 192 65">
                             <g fill-rule="evenodd">
                                 <path fill = #fff
@@ -179,7 +179,7 @@
                                 ></path>
                             </g>
                         </svg>
-                    </div>
+                    </a>
                     <input hidden type="checkbox" name="" id="header__search-search-checkbox" class="header__search-search-checkbox">
 
                     <div class="header__search-search">
@@ -560,36 +560,28 @@
                     <div class="row no-gutters product__buy">
                         <div class="col l-5 m-12 product__buy-img">
                             <div class="product__buy-img-large">
-                                <div class="product__buy-img-large-img" style="background-image: url(./asset/imgProduct/pd1.jpg);"></div>
+                                <div style="background-image: url(./asset/imgProduct/pd1.jpg);" class="product__buy-img-large-img"></div>
                             </div>
                             <div class="product__buy-img-small hide-on-mobile">
                                 <ul class="product__buy-img-small-list">
                                     <li class="product__buy-img-small-item">
-                                        <div class="product__buy-img-small-img" style="background-image: url(./asset/imgProduct/pd2.jpg);"></div>    
-                                        <i class="product__buy-img-small-icon-left fa-solid fa-arrow-left"></i>
+                                        <div onclick="changeImage('background-image: url(./asset/imgProduct/pd1.jpg)')" class="product__buy-img-small-img" style="background-image: url(./asset/imgProduct/pd1.jpg);"></div>    
                                     </li>
 
                                     <li class="product__buy-img-small-item">
-                                        <div class="product__buy-img-small-img" style="background-image: url(./asset/imgProduct/pd2.jpg);"></div>    
+                                        <div onclick="changeImage('background-image: url(./asset/imgProduct/pd3.jpg)')" class="product__buy-img-small-img" style="background-image: url(./asset/imgProduct/pd3.jpg);"></div>    
                                     </li>
 
                                     <li class="product__buy-img-small-item">
-                                        <div class="product__buy-img-small-img" style="background-image: url(./asset/imgProduct/pd2.jpg);"></div>    
+                                        <div onclick="changeImage('background-image: url(./asset/imgProduct/pd4.jpg)')" class="product__buy-img-small-img" style="background-image: url(./asset/imgProduct/pd4.jpg);"></div>    
                                     </li>
 
                                     <li class="product__buy-img-small-item">
-                                        <div class="product__buy-img-small-img" style="background-image: url(./asset/imgProduct/pd2.jpg);"></div>    
+                                        <div onclick="changeImage('background-image: url(./asset/imgProduct/pd5.jpg)')" class="product__buy-img-small-img" style="background-image: url(./asset/imgProduct/pd5.jpg);"></div>    
                                     </li>
 
                                     <li class="product__buy-img-small-item">
-                                        <div class="product__buy-img-small-img" style="background-image: url(./asset/imgProduct/pd2.jpg);"></div>    
-                                    </li>
-                                    <li class="product__buy-img-small-item">
-                                        <div class="product__buy-img-small-img" style="background-image: url(./asset/imgProduct/pd2.jpg);"></div>    
-                                        <i class="product__buy-img-small-icon-right fa-solid fa-arrow-right"></i>
-                                    </li>
-                                    <li class="product__buy-img-small-item">
-                                        <div class="product__buy-img-small-img" style="background-image: url(./asset/imgProduct/pd2.jpg);"></div>    
+                                        <div onclick="changeImage('background-image: url(./asset/imgProduct/pd6.jpg)')" class="product__buy-img-small-img" style="background-image: url(./asset/imgProduct/pd6.jpg);"></div>    
                                     </li>
 
                                 </ul>
@@ -880,9 +872,9 @@
                             <div class="product__buy-order-quantity hide-on-mobile">
                                 <span class="product__buy-order-quantity-text">Quantity</span>
                                 <div class="product__buy-order-quantity-wrap">
-                                    <i class="product__buy-order-quantity-add fa-solid fa-minus"></i>
-                                    <input type="text" class="product__buy-order-quantity-number" value="1"></input>
-                                    <i class="product__buy-order-quantity-sub fa-solid fa-plus"></i>
+                                    <i id="minus" class="product__buy-order-quantity-minus fa-solid fa-minus"></i>
+                                    <span class="product__buy-order-quantity-number">01</span>
+                                    <i id="plus" class="product__buy-order-quantity-plus fa-solid fa-plus"></i>
                                 </div>
                                 <span class="product__buy-order-quantity-current">83321 pieces available</span>
                             </div>
@@ -976,7 +968,7 @@
                                                         <div class="product__more-product-main-option-details-quantity-btn-sub">
                                                             <i class="fa-solid fa-minus"></i>
                                                         </div>
-                                                        <input value="1" type="text" class="product__more-product-main-option-details-quantity-btn-input">
+                                                        <span class="product__more-product-main-option-details-quantity-btn-input">01</span>
                                                         <div class="product__more-product-main-option-details-quantity-btn-add">
                                                             <i class="fa-solid fa-plus"></i>
                                                         </div>
