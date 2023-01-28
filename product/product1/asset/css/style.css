@@ -1206,13 +1206,15 @@ input[type='password'] {
     width: 460px;
     height: 460px;
     margin-bottom: 10px;
+    border: 1px solid #ccc;
 }
 
 .product__buy-img-large-img {
-    width: 460px;
-    height: 460px;
-    background-size: contain;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
     background-position: center;
+    object-fit: contain;
 }
 
 .product__buy-img-small {
@@ -1235,6 +1237,7 @@ input[type='password'] {
     height: 84px;
     width: 84px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .product__buy-img-small-img {
@@ -1242,7 +1245,7 @@ input[type='password'] {
     width: 84px;
     background-size: contain;
     background-position: center;
-    position: relative;
+    border: 1px solid #ccc;
 }
 
 .product__buy-img-small-icon-left {
@@ -1995,12 +1998,17 @@ input[type='password'] {
     border: 1px solid #ccc;
     line-height: 2.4rem;
     border-radius: 2px;
+    cursor: pointer;
+}
+
+.product__buy-order-color-square.select {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
 .product__buy-order-color-square:hover {
     color: var(--primary-color);
     border-color: var(--primary-color);
-    cursor: pointer;
 }
 
 .product__buy-order-size {
@@ -2033,12 +2041,17 @@ input[type='password'] {
     border: 1px solid #ccc;
     line-height: 2.4rem;
     border-radius: 2px;
+    cursor: pointer;
+}
+
+.product__buy-order-size-square.select {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
 .product__buy-order-size-square:hover {
     color: var(--primary-color);
     border-color: var(--primary-color);
-    cursor: pointer;
 }
 
 .product__buy-order-quantity {
@@ -2059,7 +2072,7 @@ input[type='password'] {
     border-radius: 2px;
 }
 
-.product__buy-order-quantity-add {
+.product__buy-order-quantity-plus {
     font-size: 1.4rem;
     color: #999;
     height: 32px;
@@ -2073,18 +2086,21 @@ input[type='password'] {
 
 .product__buy-order-quantity-number {
     display: block;
-    max-width: 50px;
-    font-size: 1.4rem;
+    width: 50px;
+    font-size: 1.6rem;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     border-left: none;
     border-right: none;
-    color: var(--text-color);
-    text-align: center;
+    color: #777;
     outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
 }
 
-.product__buy-order-quantity-sub {
+.product__buy-order-quantity-minus {
     font-size: 1.4rem;
     color: #999;
     height: 32px;
@@ -2606,14 +2622,15 @@ input[type='password'] {
 }
 
 .product__more-product-main-option-details-quantity-btn-input {
-    max-width: 40px;
+    width: 50px;
     outline: none;
     border: 1px solid #ccc;
     border-left: none;
     border-right: none;
-    text-align: center;
-    font-size: 1.4rem;
-
+    font-size: 1.6rem;
+    display: grid;
+    place-items: center;
+    user-select: none;
 }
 
 .product__more-product-main-option-details-quantity-btn-add {
