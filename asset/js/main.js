@@ -92,3 +92,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     /**END */
 }, false)
+
+// CATEGORY BTN
+document.addEventListener('DOMContentLoaded', function () {
+    var categoryBtns = document.querySelectorAll('.category-item');
+
+    for (let i = 0; i < categoryBtns.length; i++) {
+        categoryBtns[i].addEventListener('click', function () {
+            for (let k = 0; k < categoryBtns.length; k++) {
+                categoryBtns[k].classList.remove('category-icon__active');
+            }
+            categoryBtns[i].classList.add('category-icon__active');
+        })
+    }
+}, false)
+/**END */
