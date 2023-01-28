@@ -1207,7 +1207,6 @@ input[type='password'] {
 }
 
 .category-link {
-    text-decoration: none;
     font-size: 1.5rem;
     color: var(--text-color);
     font-weight: 400;
@@ -1216,6 +1215,8 @@ input[type='password'] {
     transition: right linear 0.1s;
     position: relative;
     right: 0;
+    cursor: pointer;
+    user-select: none;
 }
 
 .category-link:hover {
