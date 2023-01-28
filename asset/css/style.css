@@ -348,33 +348,6 @@
     color: rgba(245, 62, 46, 0.8);
 }
 
-/* modal layout */
-
-/* #checkbox-sign-in:checked ~ .modal {
-    display: flex;
-}
-
-#checkbox-sign-up:checked~.modal {
-    display: flex;
-} */
-/* sign-in */
-/* #checkbox-sign-in:checked ~ .modal > .modal__body > .form-sign-in {
-    display: block;
-}
-
-#checkbox-sign-in:checked ~ .modal > .modal__body > .form-sign-up {
-    display: none;
-} */
-
-/* sign-up */
-/* #checkbox-sign-up:checked ~ .modal > .modal__body > .form-sign-up {
-    display: block;
-}
-
-#checkbox-sign-up:checked ~ .modal > .modal__body > .form-sign-in {
-    display: none;
-} */
-
 .modal {
     position: fixed;
     top: 0;
@@ -388,15 +361,15 @@
 }
 
 .display-block {
-    display: block;
+    display: block !important;
 }
 
 .display-flex {
-    display: flex;
+    display: flex !important;
 }
 
 .display-hidden {
-    display: none;
+    display: none !important;
 }
 
 .modal__overlay {
@@ -427,7 +400,7 @@ input[type='password'] {
     background-color: var(--white-color);
     border-radius: 5px;
     overflow: hidden;
-    /* display: none; */
+    display: none;
 }
 
 .form-sign-up__container {
@@ -541,7 +514,7 @@ input[type='password'] {
     background-color: var(--white-color);
     border-radius: 5px;
     overflow: hidden;
-    /* display: none; */
+    display: none;
 }
 
 .form-sign-in__container {
@@ -679,16 +652,6 @@ input[type='password'] {
         display: none;
     }
 
-    .header__search-input-checkbox:checked~.header__search-overlay {
-        display: block;
-    }
-
-    .header__search-input-checkbox:checked~.header__search-menu-content {
-        transform: translateX(0);
-        opacity: 1;
-    }
-
-
     .header__search-overlay {
         position: fixed;
         top: 0;
@@ -720,6 +683,11 @@ input[type='password'] {
         transition: all linear 0.2s;
         border-right: 1px solid #999;
         z-index: 4;
+    }
+
+    .header__search-menu-content.displayMenu {
+        opacity: 1;
+        transform: translateX(0);;
     }
 
     .header__search-menu-content-icon {

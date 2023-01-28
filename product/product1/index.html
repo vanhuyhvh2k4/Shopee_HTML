@@ -104,8 +104,8 @@
                                 Trợ giúp
                             </a>
                         </li>
-                        <label for="checkbox-sign-in" style="margin-top: 4px;" class="header__navbar-item header__navbar-item--bold header__navbar-item--crossline">Đăng nhập</label>
-                        <label for="checkbox-sign-up" style="margin-top: 5px;  margin-right: unset;" class="header__navbar-item header__navbar-item--bold ">Đăng ký</label>
+                        <li id="sign-in-btn" style="margin-top: 4px;" class="header__navbar-item header__navbar-item--bold header__navbar-item--crossline">Đăng nhập</li>
+                        <li id="sign-up-btn" style="margin-top: 5px;  margin-right: unset;" class="header__navbar-item header__navbar-item--bold ">Đăng ký</li>
 
                         <li class="header__navbar-item header__navbar-user">
                             <img src="./asset/img/userimg.jpg" alt="" class="header__navbar-user-img">
@@ -130,9 +130,9 @@
                         <i class="header__search-menu-icon-icon fa-solid fa-bars"></i>
                     </label>
 
-                    <input hidden type="checkbox" name="" id="menu-checkbox" class="header__search-input-checkbox">
+                    <!-- <input hidden type="checkbox" name="" id="menu-checkbox" class="header__search-input-checkbox"> -->
                     
-                    <label for="menu-checkbox"  class="header__search-overlay"></label>
+                    <div class="header__search-overlay"></div>
 
                     <div class="header__search-menu-content">
                         <label for="menu-checkbox" class="header__search-menu-content-icon">
@@ -140,13 +140,13 @@
                         </label>
                         <ul class="header__search-menu-content-list">
                             <li class="header__search-menu-content-item">
-                                <label for="checkbox-sign-in" href="" class="header__search-menu-content-link">
+                                <label id="btn-sign-in-moble-tablet" href="" class="header__search-menu-content-link">
                                     <i class="header__search-menu-content-link-icon fa-solid fa-arrow-right-to-bracket"></i>
                                     Đăng nhập
                                 </label>
                             </li>
                             <li class="header__search-menu-content-item">
-                                <label for="checkbox-sign-up" href="" class="header__search-menu-content-link">
+                                <label id="btn-sign-up-moble-tablet" href="" class="header__search-menu-content-link">
                                     <i class="header__search-menu-content-link-icon fa-solid fa-user-plus"></i>
                                     Đăng ký
                                 </label>
@@ -338,9 +338,9 @@
             </a>
             <!-- Navigation bar -->
             <div id="navigation" class="navigation">
-                <div class="navigation__left">
+                <a href="/index.html" class="navigation__left">
                     <i class="fa-solid fa-left-long"></i>
-                </div>
+                </a>
                 <div class="navigation__right">
                     <i class="fa-solid fa-share"></i>
                     <i class="fa-solid fa-flag"></i>
@@ -1943,13 +1943,11 @@
             </div>
         </footer>
         <!-- modal layout -->
-        <input hidden type="checkbox" name="" id="checkbox-sign-in">
-        <input hidden type="checkbox" name="" id="checkbox-sign-up">
         <div class="modal">
             <div class="modal__overlay"></div>
             <div class="modal__body">
                 <!-- *Form sign up* -->
-                <div class="form-sign-up">
+                <form class="form-sign-up">
                     <div class="form-sign-up__container">
                         <div class="form-sign-up__header">
                             <h3 class="form-sign-up__heading">Đăng ký</h3>
@@ -1981,7 +1979,7 @@
                         </div>
 
                         <div class="form-sign-up__control">
-                            <label for="checkbox-sign-up" class="btn form-sign-up__control-back btn--normal">QUAY LẠI</label>
+                            <label id="sign-up-return" class="btn form-sign-up__control-back btn--normal">QUAY LẠI</label>
                             <button class="btn btn--primary">ĐĂNG KÝ</button>
                         </div>
                     </div>
@@ -1997,10 +1995,10 @@
                             <span class="form-sign-up__socials-text">Đăng nhập Google</span>
                         </a>
                     </div>
-                </div>
+                </form>
 
                 <!-- *Form sign in* -->
-                <div class="form-sign-in">
+                <form class="form-sign-in">
                     <div class="form-sign-in__container">
                         <div class="form-sign-in__header">
                             <h3 class="form-sign-in__heading">Đăng nhập</h3>
@@ -2025,7 +2023,7 @@
                         </div>
 
                         <div class="form-sign-in__control">
-                            <label for="checkbox-sign-in" class="btn form-sign-in__control-back btn--normal">QUAY LẠI</label>
+                            <label id="sign-in-return" class="btn form-sign-in__control-back btn--normal">QUAY LẠI</label>
                             <button class="btn btn--primary">ĐĂNG NHẬP</button>
                         </div>
                     </div>
@@ -2041,9 +2039,11 @@
                             <span class="form-sign-in__socials-text">Đăng nhập google</span>
                         </a>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
+
+    <script src="./asset/js/main.js"></script>
 </body>
 </html>
