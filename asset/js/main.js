@@ -77,24 +77,29 @@ document.addEventListener('DOMContentLoaded', function () {
         getMenu.classList.remove('displayMenu');
         getOverlayMobile.classList.remove('display-block');
     })
+}, false)
+
     /**END */
 
     // FILTER BTN
-    var getFilterBtn = document.querySelectorAll('.home-filter__btn');
-    
-    for (let i = 0; i < getFilterBtn.length; i++) {
-        getFilterBtn[i].addEventListener('click', function () {
-            for (let k = 0; k < getFilterBtn.length; k++) {
-                getFilterBtn[k].classList.remove('btn--primary');
-            }
-            getFilterBtn[i].classList.add('btn--primary');
-        })
-    }
+    document.addEventListener('DOMContentLoaded', function () {
+
+        var getFilterBtn = document.querySelectorAll('.home-filter__btn');
+        
+        for (let i = 0; i < getFilterBtn.length; i++) {
+            getFilterBtn[i].addEventListener('click', function () {
+                for (let k = 0; k < getFilterBtn.length; k++) {
+                    getFilterBtn[k].classList.remove('btn--primary');
+                }
+                getFilterBtn[i].classList.add('btn--primary');
+            })
+        }
+    }, false)
     /**END */
-}, false)
 
 // CATEGORY BTN
 document.addEventListener('DOMContentLoaded', function () {
+
     var categoryBtns = document.querySelectorAll('.category-item');
 
     for (let i = 0; i < categoryBtns.length; i++) {
