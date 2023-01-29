@@ -207,3 +207,43 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 }, false)
 /**END */
+
+// BUY BTN ON MOBILE
+document.addEventListener('DOMContentLoaded', function () {
+    var buyBtn = document.querySelector('.product__btn-buy-title');
+    var buyDetail = document.querySelector('.product__btn-buy-details');
+    var overlayBuy = document.querySelector('.product__btn-buy-details-overlay');
+    var closeBtn = document.querySelector('.product__btn-buy-details-form-heading-right > i');
+
+    hidden = function () {
+        buyDetail.classList.remove('display-block');
+    }
+
+    buyBtn.addEventListener('click', function () {
+        buyDetail.classList.add('display-block');
+    })
+
+    overlayBuy.addEventListener('click', hidden);
+    closeBtn.addEventListener('click', hidden);
+}, false)
+/**END */
+
+// CART BTN ON MOBILE
+document.addEventListener('DOMContentLoaded', function () {
+    var cartBtn = document.querySelector('.product__btn-cart-title');
+    var cartDetail = document.querySelector('.product__btn-cart-details');
+    var overlayCart = document.querySelector('.product__btn-cart-details-overlay');
+    var closeBtn = document.querySelector('.product__btn-cart-details-form-heading-right > i');
+
+    hidden = function () {
+        cartDetail.classList.remove('display-block');
+    }
+
+    cartBtn.addEventListener('click', function () {
+        cartDetail.classList.add('display-block');
+    })
+
+    overlayCart.addEventListener('click', hidden);
+    closeBtn.addEventListener('click', hidden);
+}, false)
+/**END */

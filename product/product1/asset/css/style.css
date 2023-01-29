@@ -1,3 +1,15 @@
+.display-block {
+    display: block !important;
+}
+
+.display-flex {
+    display: flex !important;
+}
+
+.display-hidden {
+    display: none !important;
+}
+
 .main {
     overflow: hidden;
 }
@@ -358,18 +370,6 @@
     animation: fadeIn linear 0.2s;
     z-index: 2;
     display: none;
-}
-
-.display-block {
-    display: block !important;
-}
-
-.display-flex {
-    display: flex !important;
-}
-
-.display-hidden {
-    display: none !important;
 }
 
 .modal__overlay {
@@ -4035,10 +4035,6 @@ input[type='password'] {
     color: var(--white-color);
 }
 
-#product__btn-buy-details-checkbox:checked ~ .product__btn-buy-details {
-    display: block;
-}
-
 .product__btn-buy-details {
     position: fixed;
     top: 0;
@@ -4047,6 +4043,7 @@ input[type='password'] {
     right: 0;
     display: none;
 }
+
 
 .product__btn-buy-details-overlay {
     position: absolute;   
@@ -4118,7 +4115,7 @@ input[type='password'] {
     margin-top: 12px;
 }
 
-.product__btn-buy-details-form-heading-right label {
+.product__btn-buy-details-form-heading-right i {
     font-size: 2rem;
     color: #999;
 }
@@ -4357,7 +4354,7 @@ input[type='password'] {
     margin-top: 12px;
 }
 
-.product__btn-cart-details-form-heading-right label {
+.product__btn-cart-details-form-heading-right i {
     font-size: 2rem;
     color: #999;
 }
