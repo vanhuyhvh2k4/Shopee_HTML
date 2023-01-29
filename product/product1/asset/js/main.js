@@ -207,3 +207,73 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 }, false)
 /**END */
+
+// BUY BTN ON MOBILE
+document.addEventListener('DOMContentLoaded', function () {
+    var buyBtn = document.querySelector('.product__btn-buy-title');
+    var buyDetail = document.querySelector('.product__btn-buy-details');
+    var overlayBuy = document.querySelector('.product__btn-buy-details-overlay');
+    var closeBtn = document.querySelector('.product__btn-buy-details-form-heading-right > i');
+
+    hidden = function () {
+        buyDetail.classList.remove('display-block');
+    }
+
+    buyBtn.addEventListener('click', function () {
+        buyDetail.classList.add('display-block');
+    })
+
+    overlayBuy.addEventListener('click', hidden);
+    closeBtn.addEventListener('click', hidden);
+}, false)
+/**END */
+
+// CART BTN ON MOBILE
+document.addEventListener('DOMContentLoaded', function () {
+    var cartBtn = document.querySelector('.product__btn-cart-title');
+    var cartDetail = document.querySelector('.product__btn-cart-details');
+    var overlayCart = document.querySelector('.product__btn-cart-details-overlay');
+    var closeBtn = document.querySelector('.product__btn-cart-details-form-heading-right > i');
+
+    hidden = function () {
+        cartDetail.classList.remove('display-block');
+    }
+
+    cartBtn.addEventListener('click', function () {
+        cartDetail.classList.add('display-block');
+    })
+
+    overlayCart.addEventListener('click', hidden);
+    closeBtn.addEventListener('click', hidden);
+}, false)
+/**END */
+
+// SELECT BUY BTN ON MOBILE
+document.addEventListener('DOMContentLoaded', function () {
+    var smallImgs = document.querySelectorAll('.product__btn-buy-details-form-section-color-details-item-img');
+    var mainImg = document.querySelector('.product__btn-buy-details-form-heading-left-img > img');
+    var fileName = [];
+
+
+    for (let i = 0; i < smallImgs.length; i++) {
+        fileName[i] = smallImgs[i].getAttribute('src');
+        smallImgs[i].addEventListener('click', function () {
+            mainImg.setAttribute('src', fileName[i]);
+        });
+    }
+}, false)
+/**END */
+
+// SELECT CART BTN ON MOBILE
+var smallImgs = document.querySelectorAll('.product__btn-cart-details-form-section-color-details-item-img');
+    var mainImg = document.querySelector('.product__btn-cart-details-form-heading-left-img > img');
+    var fileName = [];
+
+
+    for (let i = 0; i < smallImgs.length; i++) {
+        fileName[i] = smallImgs[i].getAttribute('src');
+        smallImgs[i].addEventListener('click', function () {
+            mainImg.setAttribute('src', fileName[i]);
+        });
+    }
+/**END */

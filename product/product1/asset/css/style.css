@@ -1,3 +1,15 @@
+.display-block {
+    display: block !important;
+}
+
+.display-flex {
+    display: flex !important;
+}
+
+.display-hidden {
+    display: none !important;
+}
+
 .main {
     overflow: hidden;
 }
@@ -358,18 +370,6 @@
     animation: fadeIn linear 0.2s;
     z-index: 2;
     display: none;
-}
-
-.display-block {
-    display: block !important;
-}
-
-.display-flex {
-    display: flex !important;
-}
-
-.display-hidden {
-    display: none !important;
 }
 
 .modal__overlay {
@@ -4011,6 +4011,10 @@ input[type='password'] {
 
 .product__btn-cart-title {
     font-size: 1.4rem;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
 }
 
 
@@ -4033,10 +4037,10 @@ input[type='password'] {
 .product__btn-buy-title {
     font-size: 1.6rem;
     color: var(--white-color);
-}
-
-#product__btn-buy-details-checkbox:checked ~ .product__btn-buy-details {
-    display: block;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
 }
 
 .product__btn-buy-details {
@@ -4047,6 +4051,7 @@ input[type='password'] {
     right: 0;
     display: none;
 }
+
 
 .product__btn-buy-details-overlay {
     position: absolute;   
@@ -4118,7 +4123,7 @@ input[type='password'] {
     margin-top: 12px;
 }
 
-.product__btn-buy-details-form-heading-right label {
+.product__btn-buy-details-form-heading-right i {
     font-size: 2rem;
     color: #999;
 }
@@ -4160,10 +4165,6 @@ input[type='password'] {
     overflow: hidden;
     border: 1px solid var(--primary-color);
     margin-bottom: 24px;
-}
-
-.product__btn-buy-details-form-section-color-details-item-checkbox:checked ~ .product__btn-buy-details-form-section-color-details-item {
-    border: 4px solid var(--primary-color);
 }
 
 .product__btn-buy-details-form-section-color-details-item img {
@@ -4357,7 +4358,7 @@ input[type='password'] {
     margin-top: 12px;
 }
 
-.product__btn-cart-details-form-heading-right label {
+.product__btn-cart-details-form-heading-right i {
     font-size: 2rem;
     color: #999;
 }
@@ -4399,10 +4400,6 @@ input[type='password'] {
     overflow: hidden;
     border: 1px solid var(--primary-color);
     margin-bottom: 24px;
-}
-
-.product__btn-cart-details-form-section-color-details-item-checkbox:checked ~ .product__btn-cart-details-form-section-color-details-item {
-    border: 4px solid var(--primary-color);
 }
 
 .product__btn-cart-details-form-section-color-details-item img {
