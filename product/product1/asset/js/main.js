@@ -43,10 +43,10 @@ document.addEventListener('DOMContentLoaded', function () {
 /**END  */
 
 // DISPLAY SMALL IMAGE WHEN CLICKED
-function changeImage(fileName) {
-    let bigImage = document.querySelector('.product__buy-img-large-img');
-    bigImage.setAttribute('style', fileName);
-}
+    function changeImage(fileName) {
+        let bigImage = document.querySelector('.product__buy-img-large-img');
+        bigImage.setAttribute('style', fileName);
+    }
 /**END */
 
 // HANDLE SIGN IN AND SIGN UP ON TABLET AND MOBILE
@@ -57,6 +57,12 @@ document.addEventListener('DOMContentLoaded', function () {
     var getMenu = document.querySelector('.header__search-menu-content');
     var getOverlayMobile = document.querySelector('.header__search-overlay');
     var getCloseIcon = document.querySelector('.header__search-menu-content-icon');
+    var getModal = document.querySelector('.modal');
+    var getFormSignIn = document.querySelector('.form-sign-in');
+    var getFormSignUp = document.querySelector('.form-sign-up');
+
+
+
 
     getMenuIcon.addEventListener('click', function () {
         getMenu.classList.add('displayMenu');
