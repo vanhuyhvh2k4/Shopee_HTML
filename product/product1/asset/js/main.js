@@ -247,3 +247,33 @@ document.addEventListener('DOMContentLoaded', function () {
     closeBtn.addEventListener('click', hidden);
 }, false)
 /**END */
+
+// SELECT BUY BTN ON MOBILE
+document.addEventListener('DOMContentLoaded', function () {
+    var smallImgs = document.querySelectorAll('.product__btn-buy-details-form-section-color-details-item-img');
+    var mainImg = document.querySelector('.product__btn-buy-details-form-heading-left-img > img');
+    var fileName = [];
+
+
+    for (let i = 0; i < smallImgs.length; i++) {
+        fileName[i] = smallImgs[i].getAttribute('src');
+        smallImgs[i].addEventListener('click', function () {
+            mainImg.setAttribute('src', fileName[i]);
+        });
+    }
+}, false)
+/**END */
+
+// SELECT CART BTN ON MOBILE
+var smallImgs = document.querySelectorAll('.product__btn-cart-details-form-section-color-details-item-img');
+    var mainImg = document.querySelector('.product__btn-cart-details-form-heading-left-img > img');
+    var fileName = [];
+
+
+    for (let i = 0; i < smallImgs.length; i++) {
+        fileName[i] = smallImgs[i].getAttribute('src');
+        smallImgs[i].addEventListener('click', function () {
+            mainImg.setAttribute('src', fileName[i]);
+        });
+    }
+/**END */
