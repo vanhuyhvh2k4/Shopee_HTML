@@ -253,12 +253,17 @@ document.addEventListener('DOMContentLoaded', function () {
     var smallImgs = document.querySelectorAll('.product__btn-buy-details-form-section-color-details-item-img');
     var mainImg = document.querySelector('.product__btn-buy-details-form-heading-left-img > img');
     var fileName = [];
+    var smallImgsItems = document.querySelectorAll('.product__btn-buy-details-form-section-color-details-item');
 
 
     for (let i = 0; i < smallImgs.length; i++) {
         fileName[i] = smallImgs[i].getAttribute('src');
         smallImgs[i].addEventListener('click', function () {
             mainImg.setAttribute('src', fileName[i]);
+            for (let k = 0; k < smallImgs.length; k++) {
+                smallImgsItems[k].classList.remove('select');
+            }
+            smallImgsItems[i].classList.add('select');
         });
     }
 }, false)
@@ -268,12 +273,47 @@ document.addEventListener('DOMContentLoaded', function () {
 var smallImgs = document.querySelectorAll('.product__btn-cart-details-form-section-color-details-item-img');
     var mainImg = document.querySelector('.product__btn-cart-details-form-heading-left-img > img');
     var fileName = [];
+    var smallImgsItems = document.querySelectorAll('.product__btn-cart-details-form-section-color-details-item');
 
 
     for (let i = 0; i < smallImgs.length; i++) {
         fileName[i] = smallImgs[i].getAttribute('src');
         smallImgs[i].addEventListener('click', function () {
             mainImg.setAttribute('src', fileName[i]);
+            for (let k = 0; k < smallImgs.length; k++) {
+                smallImgsItems[k].classList.remove('select');
+            }
+            smallImgsItems[i].classList.add('select');
         });
     }
+/**END */
+
+// SIZE BUY BTN ON MOBILE 
+document.addEventListener('DOMContentLoaded', function () {
+    var getSizeBtns = document.querySelectorAll('.product__btn-buy-details-form-section-size-details-item');
+
+    for (let i = 0; i < getSizeBtns.length; i++) {
+        getSizeBtns[i].addEventListener('click', function () {
+            for (let k = 0; k < getSizeBtns.length; k++) {
+                getSizeBtns[k].classList.remove('active');
+            }
+            getSizeBtns[i].classList.add('active');
+        })
+    }
+}, false)
+/**END */
+
+// SIZE CART BTN ON MOBILE
+document.addEventListener('DOMContentLoaded', function () {
+    var getSizeBtns = document.querySelectorAll('.product__btn-cart-details-form-section-size-details-item');
+
+    for (let i = 0; i < getSizeBtns.length; i++) {
+        getSizeBtns[i].addEventListener('click', function () {
+            for (let k = 0; k < getSizeBtns.length; k++) {
+                getSizeBtns[k].classList.remove('active');
+            }
+            getSizeBtns[i].classList.add('active');
+        })
+    }
+}, false)
 /**END */
