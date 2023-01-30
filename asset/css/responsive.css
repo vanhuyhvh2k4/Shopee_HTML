@@ -38,6 +38,9 @@
         margin-bottom: 40px;
     }
 
+    .form-sign-up__control {
+        margin-top: unset;
+    }
 }
 
 /* Tablet */
@@ -125,7 +128,6 @@
     .header__search-menu-content-link {
         padding: 24px 48px;
     }
-
 
 }
 
@@ -297,9 +299,19 @@
 
     .form-sign-in {
         width: 100vw;
+        position: fixed;
+        bottom: 40px;
+        left: 0;
     }
 
     .form-sign-up {
         width: 100vw;
+        position: fixed;
+        left: 0;
+        bottom: 20px;
+    }
+
+    .home-product-item {
+        min-height: 364px;
     }
 }

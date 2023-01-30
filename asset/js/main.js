@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var getSignInReturn = document.querySelector('#sign-in-return');
     var getSignUpReturn = document.querySelector('#sign-up-return');
     var getFormSignUp = document.querySelector('.form-sign-up');
+    var getSignUpSwitch = document.querySelector('.form-sign-in__switch-btn');
+    var getSignInSwitch = document.querySelector('.form-sign-up__switch-btn');
     
 
     // HANDLE SIGN IN AND SIGN UP ON DESKTOP
@@ -39,6 +41,16 @@ document.addEventListener('DOMContentLoaded', function () {
         getFormSignUp.classList.remove('display-block');
     })
 
+    getSignInSwitch.addEventListener('click', function () {
+        getFormSignIn.classList.add('display-block');
+        getFormSignUp.classList.remove('display-block');
+    })
+
+    getSignUpSwitch.addEventListener('click', function () {
+        getFormSignUp.classList.add('display-block');
+        getFormSignIn.classList.remove('display-block');
+    })
+
     /**END  */
 
     // HANDLE SIGN IN AND SIGN UP ON TABLET AND MOBILE
@@ -67,6 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
     getBtnSignInMobileTablet.addEventListener('click', function () {
         getModal.classList.add('display-flex');
         getFormSignIn.classList.add('display-block');
+        getFormSignUp.classList.remove('display-block');
         getMenu.classList.remove('displayMenu');
         getOverlayMobile.classList.remove('display-block');
     })
@@ -74,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
     getBtnSignUpMobileTablet.addEventListener('click', function () {
         getModal.classList.add('display-flex');
         getFormSignUp.classList.add('display-block');
+        getFormSignIn.classList.remove('display-block');
         getMenu.classList.remove('displayMenu');
         getOverlayMobile.classList.remove('display-block');
     })
@@ -92,6 +106,42 @@ document.addEventListener('DOMContentLoaded', function () {
                     getFilterBtn[k].classList.remove('btn--primary');
                 }
                 getFilterBtn[i].classList.add('btn--primary');
+            })
+        }
+    }, false)
+    /**END */
+
+    // HIDE SOFT FILTER WHEN SCROLL
+    document.addEventListener('DOMContentLoaded', function () {
+        var getSoftFilter = document.querySelector('.sort-filter');
+
+        window.addEventListener('scroll', function () {
+            if (window.pageYOffset > 10) {
+                getSoftFilter.classList.add('hidden');
+            }
+            else {
+                getSoftFilter.classList.remove('hidden');
+            }
+        })
+    })
+    /**END */
+
+    // SORT FILTER BTN 
+    document.addEventListener('DOMContentLoaded', function () {
+
+        var getFilterBtn = document.querySelectorAll('.sort-filter-item-nothing');
+        var getFilterBtnLink = document.querySelectorAll('.sort-filter-link');
+        
+        for (let i = 0; i < getFilterBtn.length; i++) {
+            getFilterBtn[i].addEventListener('click', function () {
+                for (let k = 0; k < getFilterBtn.length; k++) {
+                    getFilterBtn[k].classList.remove('sort-filter-item--active');
+                getFilterBtnLink[k].classList.remove('sort-filter-link--active');
+
+                }
+                getFilterBtnLink[i] = event.preventDefault();
+                getFilterBtnLink[i].classList.add('sort-filter-link--active');
+                getFilterBtn[i].classList.add('sort-filter-item--active');
             })
         }
     }, false)
