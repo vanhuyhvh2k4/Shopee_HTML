@@ -856,6 +856,7 @@ input[type='password'] {
     line-height: 2.4rem;
     width: 100%;
     padding-left: 8px;
+    color: var(--primary-color);
 }
 
 .header__search-item:hover {
@@ -882,6 +883,10 @@ input[type='password'] {
     position: absolute;
     top: 15px;
     left: 0;
+}
+
+.header__search--disable-select {
+    color: var(--text-color);
 }
 
 .header__search--disable-select i {

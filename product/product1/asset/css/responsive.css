@@ -497,7 +497,7 @@
     }
 
     .product__buy-order-shipping-fee {
-        margin-left: 26px;
+        margin-left: unset;
     }
 
     .product__buy-order-cost-old-cost {
@@ -507,7 +507,7 @@
     }
 
     .product__buy-order-guarantee-text {
-        white-space: pre-wrap;
+        white-space: normal;
     }
 
     .product__buy-order-shipping-to-location {
@@ -729,5 +729,25 @@
     }
     .form-sign-up {
         width: 100vw;
+    }
+
+    .form-sign-up__control {
+        margin-top: unset;
+    }
+
+    .product__buy-order-voucher-view {
+        width: 100vw;
+    }
+
+    .product__buy-order-voucher-view-list-item-img {
+        display: none;
+    }
+
+    .product__buy-order-voucher-view-list-item-voucher {
+        flex: 0.7;
+    }
+
+    .product__buy-order-shipping-fee-recive-time {
+        left: -102px;
     }
 }
