@@ -725,11 +725,18 @@ input[type='password'] {
 .header__search-menu-content-link {
     text-decoration: none;
     padding: 18px 24px;
-    display: block;
+    display: flex;
     width: 100%;
     font-size: 1.6rem;
     color: var(--text-color);
     font-weight: 400;
+    align-items: flex-start;
+}
+
+.header__search-menu-content-link > span {
+    display: block;
+    white-space: normal;
+    line-height: 2rem;
 }
 
 .header__search-menu-content-link-icon {
@@ -867,6 +874,7 @@ input[type='password'] {
     line-height: 2.4rem;
     width: 100%;
     padding: 6px 8px;
+    color: var(--primary-color);
 }
 
 .header__search-item:hover {
@@ -893,6 +901,10 @@ input[type='password'] {
     position: absolute;
     top: 15px;
     left: 0;
+}
+
+.header__search--disable-select  {
+    color: var(--text-color);
 }
 
 .header__search--disable-select i {
@@ -1615,7 +1627,8 @@ input[type='password'] {
 .product__buy-order-vouchers-item-number {
     font-size: 1.6rem;
     color: var(--primary-color);
-    font-weight: 400
+    font-weight: 400;
+    white-space: nowrap;
 }
 
 
@@ -3554,7 +3567,7 @@ input[type='password'] {
 
 .pertainProduct-content-item-banner-prefered {
     position: absolute;
-    top: 10px;
+    top: 4px;
     left: -4px;
     width: fit-content;
     height: fit-content;
@@ -3582,7 +3595,8 @@ input[type='password'] {
     top: 0;
     right: 0;
     text-align: center;
-    width: fit-content;
+    width: 42px;
+    height: 38px;
     background-color: rgba(240, 201, 42, 0.9);
     padding: 0px 2px;
 }
@@ -3590,10 +3604,10 @@ input[type='password'] {
 .pertainProduct-content-item-banner-sale::before {
     content: "";
     position: absolute;
-    bottom: -16px;
+    bottom: -8px;
     left: 0;
     border-style: solid;
-    border-width: 8px 12px;
+    border-width: 4px 12px;
     border-top-color: rgba(240, 201, 42, 0.9);
     border-left-color: rgba(240, 201, 42, 0.9);
     border-right-color: transparent;
@@ -3603,10 +3617,10 @@ input[type='password'] {
 .pertainProduct-content-item-banner-sale::after {
     content: "";
     position: absolute;
-    bottom: -16px;
+    bottom: -8px;
     right: 0;
     border-style: solid;
-    border-width: 8px 12px;
+    border-width: 4px 12px;
     border-top-color: rgba(240, 201, 42, 0.9);
     border-right-color: rgba(240, 201, 42, 0.9);
     border-left-color: transparent;
@@ -3617,14 +3631,12 @@ input[type='password'] {
     font-size: 1.4rem;
     color: var(--primary-color);
     display: block;
-    transform: translateY(2px);
 }
 
 .pertainProduct-content-item-banner-sale-text {
     font-size: 1.2rem;
     color: var(--white-color);
     display: block;
-    transform: translateY(2px);
 }
 
 .pertainProduct-content-seeMore {

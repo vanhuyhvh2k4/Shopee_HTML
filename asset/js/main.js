@@ -95,6 +95,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
     /**END */
 
+// SEARCH OPTION
+document.addEventListener('DOMContentLoaded', function () {
+    var optionBtns = document.querySelectorAll('.header__search-item');
+
+    for (let i = 0; i < optionBtns.length; i++) {
+        optionBtns[i].addEventListener('click', function () {
+            for (let k = 0; k < optionBtns.length; k++) {
+                optionBtns[k].classList.add('header__search--disable-select');
+            }
+            this.classList.remove('header__search--disable-select');
+        })
+    }
+})
+/**END */
+
     // FILTER BTN
     document.addEventListener('DOMContentLoaded', function () {
 
