@@ -4018,9 +4018,10 @@ input[type='password'] {
 }
 
 
-.product__btn-cart i {
+.product__btn-cart > i {
     font-size: 1.8rem;
-    margin-right: 6px;
+    position: relative;
+    left: 40px;
 }
 
 .product__btn-buy {
@@ -4167,6 +4168,24 @@ input[type='password'] {
     margin-bottom: 24px;
 }
 
+.product__btn-buy-details-form-section-color-details-item.select {
+    width: 100%;
+    position: relative;
+}
+
+.product__btn-buy-details-form-section-color-details-item.select::before {
+    content: "Selected";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    font-size: 1.6rem;
+    color: var(--white-color);
+}
+
 .product__btn-buy-details-form-section-color-details-item img {
     position: relative;
     width: 100%;
@@ -4234,6 +4253,12 @@ input[type='password'] {
     margin-bottom: 12px;
     font-size: 1.4rem;
     color: var(--text-color);
+    cursor: pointer;
+}
+
+.product__btn-buy-details-form-section-size-details-item.active {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
 }
 
 .product__btn-buy-details-form-section-quantity-title {
@@ -4250,7 +4275,7 @@ input[type='password'] {
     height: 40px;
 }
 
-.product__btn-buy-details-form-section-quantity-details i {
+.product__btn-buy-details-form-section-quantity-details > i {
     font-size: 1.2rem;
     color: var(--text-color);
     border: 1px solid #ccc;
@@ -4259,18 +4284,19 @@ input[type='password'] {
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 
-.product__btn-buy-details-form-section-quantity-details input {
+.product__btn-buy-details-form-section-quantity-details > span {
     width: 50px;
     height: 100%;
-    outline: none;
-    text-align: center;
     font-size: 1.4rem;
     color: var(--text-color);
     border: 1px solid #ccc;
     border-left: unset;
     border-right: unset;
+    display: grid;
+    place-items: center;
 }
 
 
@@ -4401,6 +4427,23 @@ input[type='password'] {
     border: 1px solid var(--primary-color);
     margin-bottom: 24px;
 }
+.product__btn-cart-details-form-section-color-details-item.select {
+    width: 100%;
+    position: relative;
+}
+
+.product__btn-cart-details-form-section-color-details-item.select::before {
+    content: "Selected";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    font-size: 1.6rem;
+    color: var(--white-color);
+}
 
 .product__btn-cart-details-form-section-color-details-item img {
     position: relative;
@@ -4469,6 +4512,11 @@ input[type='password'] {
     margin-bottom: 12px;
     font-size: 1.4rem;
     color: var(--text-color);
+    cursor: pointer;
+}
+.product__btn-cart-details-form-section-size-details-item.active {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
 }
 
 .product__btn-cart-details-form-section-quantity-title {
@@ -4482,10 +4530,12 @@ input[type='password'] {
 .product__btn-cart-details-form-section-quantity-details {
     display: flex;
     align-items: center;
+    width: fit-content;
     height: 40px;
+    justify-content: center;
 }
 
-.product__btn-cart-details-form-section-quantity-details i {
+.product__btn-cart-details-form-section-quantity-details > i {
     font-size: 1.2rem;
     color: var(--text-color);
     border: 1px solid #ccc;
@@ -4494,18 +4544,17 @@ input[type='password'] {
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 
-.product__btn-cart-details-form-section-quantity-details input {
+.product__btn-cart-details-form-section-quantity-details > span {
     width: 50px;
     height: 100%;
-    outline: none;
-    text-align: center;
     font-size: 1.4rem;
     color: var(--text-color);
     border: 1px solid #ccc;
     border-left: unset;
     border-right: unset;
+    display: grid;
+    place-items: center;
 }
-
-

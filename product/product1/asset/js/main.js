@@ -43,10 +43,10 @@ document.addEventListener('DOMContentLoaded', function () {
 /**END  */
 
 // DISPLAY SMALL IMAGE WHEN CLICKED
-    function changeImage(fileName) {
-        let bigImage = document.querySelector('.product__buy-img-large-img');
-        bigImage.setAttribute('style', fileName);
-    }
+function changeImage(fileName) {
+    let bigImage = document.querySelector('.product__buy-img-large-img');
+    bigImage.setAttribute('style', fileName);
+}
 /**END */
 
 // HANDLE SIGN IN AND SIGN UP ON TABLET AND MOBILE
@@ -253,12 +253,17 @@ document.addEventListener('DOMContentLoaded', function () {
     var smallImgs = document.querySelectorAll('.product__btn-buy-details-form-section-color-details-item-img');
     var mainImg = document.querySelector('.product__btn-buy-details-form-heading-left-img > img');
     var fileName = [];
+    var smallImgsItems = document.querySelectorAll('.product__btn-buy-details-form-section-color-details-item');
 
 
     for (let i = 0; i < smallImgs.length; i++) {
         fileName[i] = smallImgs[i].getAttribute('src');
         smallImgs[i].addEventListener('click', function () {
             mainImg.setAttribute('src', fileName[i]);
+            for (let k = 0; k < smallImgs.length; k++) {
+                smallImgsItems[k].classList.remove('select');
+            }
+            smallImgsItems[i].classList.add('select');
         });
     }
 }, false)
@@ -266,14 +271,105 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // SELECT CART BTN ON MOBILE
 var smallImgs = document.querySelectorAll('.product__btn-cart-details-form-section-color-details-item-img');
-    var mainImg = document.querySelector('.product__btn-cart-details-form-heading-left-img > img');
-    var fileName = [];
+var mainImg = document.querySelector('.product__btn-cart-details-form-heading-left-img > img');
+var fileName = [];
+var smallImgsItems = document.querySelectorAll('.product__btn-cart-details-form-section-color-details-item');
 
 
-    for (let i = 0; i < smallImgs.length; i++) {
-        fileName[i] = smallImgs[i].getAttribute('src');
-        smallImgs[i].addEventListener('click', function () {
-            mainImg.setAttribute('src', fileName[i]);
-        });
+for (let i = 0; i < smallImgs.length; i++) {
+    fileName[i] = smallImgs[i].getAttribute('src');
+    smallImgs[i].addEventListener('click', function () {
+        mainImg.setAttribute('src', fileName[i]);
+        for (let k = 0; k < smallImgs.length; k++) {
+            smallImgsItems[k].classList.remove('select');
+        }
+        smallImgsItems[i].classList.add('select');
+    });
+}
+/**END */
+
+// SIZE BUY BTN ON MOBILE 
+document.addEventListener('DOMContentLoaded', function () {
+    var getSizeBtns = document.querySelectorAll('.product__btn-buy-details-form-section-size-details-item');
+
+    for (let i = 0; i < getSizeBtns.length; i++) {
+        getSizeBtns[i].addEventListener('click', function () {
+            for (let k = 0; k < getSizeBtns.length; k++) {
+                getSizeBtns[k].classList.remove('active');
+            }
+            getSizeBtns[i].classList.add('active');
+        })
     }
+}, false)
+/**END */
+
+// SIZE CART BTN ON MOBILE
+document.addEventListener('DOMContentLoaded', function () {
+    var getSizeBtns = document.querySelectorAll('.product__btn-cart-details-form-section-size-details-item');
+
+    for (let i = 0; i < getSizeBtns.length; i++) {
+        getSizeBtns[i].addEventListener('click', function () {
+            for (let k = 0; k < getSizeBtns.length; k++) {
+                getSizeBtns[k].classList.remove('active');
+            }
+            getSizeBtns[i].classList.add('active');
+        })
+    }
+}, false)
+/**END */
+
+// QUANTITY BUY BTN ON MOBILE
+document.addEventListener('DOMContentLoaded', function () {
+    var getPlus = document.querySelector('.product__btn-buy-details-form-section-quantity-details-plus')
+    var getInput = document.querySelector('.product__btn-buy-details-form-section-quantity-details-input');
+    var getMinus = document.querySelector('.product__btn-buy-details-form-section-quantity-details-minus');
+    var quantity = 1;
+
+    getPlus.addEventListener('click', function () {
+        quantity++;
+        if (quantity < 10) {
+            getInput.innerText = '0' + quantity;
+        } else {
+            getInput.innerText = quantity;
+        }
+    })
+    getMinus.addEventListener('click', function () {
+        if (quantity > 1) {
+            quantity--;
+            if (quantity < 10) {
+                getInput.innerText = '0' + quantity;
+            } else {
+                getInput.innerText = quantity;
+            }
+        }
+    })
+}, false)
+/**END */
+
+// QUANTITY CART BTN ON MOBILE 
+document.addEventListener('DOMContentLoaded', function () {
+    var getPlus = document.querySelector('.product__btn-cart-details-form-section-quantity-details-plus')
+    var getInput = document.querySelector('.product__btn-cart-details-form-section-quantity-details-input');
+    var getMinus = document.querySelector('.product__btn-cart-details-form-section-quantity-details-minus');
+    var quantity = 1;
+
+    getPlus.addEventListener('click', function () {
+        quantity++;
+        if (quantity < 10) {
+            getInput.innerText = '0' + quantity;
+        } else {
+            getInput.innerText = quantity;
+        }
+    })
+    getMinus.addEventListener('click', function () {
+        if (quantity > 1) {
+            quantity--;
+            if (quantity < 10) {
+                getInput.innerText = '0' + quantity;
+            } else {
+                getInput.innerText = quantity;
+            }
+        }
+    })
+}, false)
 /**END */
